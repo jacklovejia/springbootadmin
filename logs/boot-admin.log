@@ -1,0 +1,223 @@
+2019-03-08 17:35:26.803  INFO 9624 --- [main] com.jack.adminserver.AdminServerApp      : No active profile set, falling back to default profiles: default
+2019-03-08 17:35:26.828  INFO 9624 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@67427b69: startup date [Fri Mar 08 17:35:26 CST 2019]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@544fa968
+2019-03-08 17:35:27.696  INFO 9624 --- [main] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'instancesProxyController' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=de.codecentric.boot.admin.server.config.AdminServerWebConfiguration$ServletRestApiConfirguation; factoryMethodName=instancesProxyController; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [de/codecentric/boot/admin/server/config/AdminServerWebConfiguration$ServletRestApiConfirguation.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=de.codecentric.boot.admin.server.config.AdminServerWebConfiguration$ReactiveRestApiConfiguration; factoryMethodName=instancesProxyController; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [de/codecentric/boot/admin/server/config/AdminServerWebConfiguration$ReactiveRestApiConfiguration.class]]
+2019-03-08 17:35:27.697  INFO 9624 --- [main] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'adminHandlerMapping' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=de.codecentric.boot.admin.server.config.AdminServerWebConfiguration$ServletRestApiConfirguation; factoryMethodName=adminHandlerMapping; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [de/codecentric/boot/admin/server/config/AdminServerWebConfiguration$ServletRestApiConfirguation.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=de.codecentric.boot.admin.server.config.AdminServerWebConfiguration$ReactiveRestApiConfiguration; factoryMethodName=adminHandlerMapping; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [de/codecentric/boot/admin/server/config/AdminServerWebConfiguration$ReactiveRestApiConfiguration.class]]
+2019-03-08 17:35:27.817  INFO 9624 --- [main] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'mbeanServer' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.jmx.JmxAutoConfiguration; factoryMethodName=mbeanServer; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/jmx/JmxAutoConfiguration.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.actuate.autoconfigure.EndpointMBeanExportAutoConfiguration; factoryMethodName=mbeanServer; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/actuate/autoconfigure/EndpointMBeanExportAutoConfiguration.class]]
+2019-03-08 17:35:27.824  INFO 9624 --- [main] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'serverProperties' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.web.ServerPropertiesAutoConfiguration; factoryMethodName=serverProperties; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/web/ServerPropertiesAutoConfiguration.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.actuate.autoconfigure.ManagementServerPropertiesAutoConfiguration; factoryMethodName=serverProperties; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/actuate/autoconfigure/ManagementServerPropertiesAutoConfiguration.class]]
+2019-03-08 17:35:27.855 ERROR 9624 --- [main] o.s.boot.SpringApplication               : Application startup failed
+
+java.lang.IllegalStateException: Could not evaluate condition on org.springframework.boot.actuate.autoconfigure.EndpointWebMvcAutoConfiguration$EndpointWebMvcConfiguration due to org/thymeleaf/spring5/templateresolver/SpringResourceTemplateResolver not found. Make sure your own configuration does not rely on that class. This can also happen if you are @ComponentScanning a springframework package (e.g. if you put a @ComponentScan in the default package by mistake)
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:55)
+	at org.springframework.context.annotation.ConditionEvaluator.shouldSkip(ConditionEvaluator.java:102)
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader$TrackedConditionEvaluator.shouldSkip(ConfigurationClassBeanDefinitionReader.java:443)
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader$TrackedConditionEvaluator.shouldSkip(ConfigurationClassBeanDefinitionReader.java:432)
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForConfigurationClass(ConfigurationClassBeanDefinitionReader.java:127)
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitions(ConfigurationClassBeanDefinitionReader.java:116)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:320)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:228)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:272)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:92)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:687)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:525)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1118)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1107)
+	at com.jack.adminserver.AdminServerApp.main(AdminServerApp.java:13)
+Caused by: java.lang.NoClassDefFoundError: org/thymeleaf/spring5/templateresolver/SpringResourceTemplateResolver
+	at java.lang.Class.getDeclaredMethods0(Native Method)
+	at java.lang.Class.privateGetDeclaredMethods(Class.java:2701)
+	at java.lang.Class.getDeclaredMethods(Class.java:1975)
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:613)
+	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:524)
+	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:510)
+	at org.springframework.util.ReflectionUtils.getUniqueDeclaredMethods(ReflectionUtils.java:570)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.getTypeForFactoryMethod(AbstractAutowireCapableBeanFactory.java:697)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineTargetType(AbstractAutowireCapableBeanFactory.java:640)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.predictBeanType(AbstractAutowireCapableBeanFactory.java:609)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:1484)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doGetBeanNamesForType(DefaultListableBeanFactory.java:425)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanNamesForType(DefaultListableBeanFactory.java:395)
+	at org.springframework.boot.actuate.autoconfigure.EndpointWebMvcAutoConfiguration$ManagementServerPort.hasCustomBeanDefinition(EndpointWebMvcAutoConfiguration.java:424)
+	at org.springframework.boot.actuate.autoconfigure.EndpointWebMvcAutoConfiguration$ManagementServerPort.hasCustomBeanDefinition(EndpointWebMvcAutoConfiguration.java:417)
+	at org.springframework.boot.actuate.autoconfigure.EndpointWebMvcAutoConfiguration$ManagementServerPort.get(EndpointWebMvcAutoConfiguration.java:368)
+	at org.springframework.boot.actuate.autoconfigure.EndpointWebMvcAutoConfiguration$OnManagementMvcCondition.getMatchOutcome(EndpointWebMvcAutoConfiguration.java:345)
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:47)
+	... 18 common frames omitted
+Caused by: java.lang.ClassNotFoundException: org.thymeleaf.spring5.templateresolver.SpringResourceTemplateResolver
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:335)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	... 36 common frames omitted
+
+2019-03-08 17:35:27.859  INFO 9624 --- [main] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@67427b69: startup date [Fri Mar 08 17:35:26 CST 2019]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@544fa968
+2019-03-08 17:38:19.008  INFO 10328 --- [main] com.jack.adminserver.AdminServerApp      : No active profile set, falling back to default profiles: default
+2019-03-08 17:38:19.033  INFO 10328 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@e24ddd0: startup date [Fri Mar 08 17:38:19 CST 2019]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@544fa968
+2019-03-08 17:38:19.798  INFO 10328 --- [main] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'instancesProxyController' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=de.codecentric.boot.admin.server.config.AdminServerWebConfiguration$ServletRestApiConfirguation; factoryMethodName=instancesProxyController; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [de/codecentric/boot/admin/server/config/AdminServerWebConfiguration$ServletRestApiConfirguation.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=de.codecentric.boot.admin.server.config.AdminServerWebConfiguration$ReactiveRestApiConfiguration; factoryMethodName=instancesProxyController; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [de/codecentric/boot/admin/server/config/AdminServerWebConfiguration$ReactiveRestApiConfiguration.class]]
+2019-03-08 17:38:19.799  INFO 10328 --- [main] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'adminHandlerMapping' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=de.codecentric.boot.admin.server.config.AdminServerWebConfiguration$ServletRestApiConfirguation; factoryMethodName=adminHandlerMapping; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [de/codecentric/boot/admin/server/config/AdminServerWebConfiguration$ServletRestApiConfirguation.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=de.codecentric.boot.admin.server.config.AdminServerWebConfiguration$ReactiveRestApiConfiguration; factoryMethodName=adminHandlerMapping; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [de/codecentric/boot/admin/server/config/AdminServerWebConfiguration$ReactiveRestApiConfiguration.class]]
+2019-03-08 17:38:19.904  INFO 10328 --- [main] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'mbeanServer' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.jmx.JmxAutoConfiguration; factoryMethodName=mbeanServer; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/jmx/JmxAutoConfiguration.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.actuate.autoconfigure.EndpointMBeanExportAutoConfiguration; factoryMethodName=mbeanServer; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/actuate/autoconfigure/EndpointMBeanExportAutoConfiguration.class]]
+2019-03-08 17:38:19.910  INFO 10328 --- [main] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'serverProperties' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.web.ServerPropertiesAutoConfiguration; factoryMethodName=serverProperties; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/web/ServerPropertiesAutoConfiguration.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.actuate.autoconfigure.ManagementServerPropertiesAutoConfiguration; factoryMethodName=serverProperties; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/actuate/autoconfigure/ManagementServerPropertiesAutoConfiguration.class]]
+2019-03-08 17:38:19.939 ERROR 10328 --- [main] o.s.boot.SpringApplication               : Application startup failed
+
+java.lang.IllegalStateException: Could not evaluate condition on org.springframework.boot.actuate.autoconfigure.EndpointWebMvcAutoConfiguration$EndpointWebMvcConfiguration due to org/thymeleaf/spring5/templateresolver/SpringResourceTemplateResolver not found. Make sure your own configuration does not rely on that class. This can also happen if you are @ComponentScanning a springframework package (e.g. if you put a @ComponentScan in the default package by mistake)
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:55)
+	at org.springframework.context.annotation.ConditionEvaluator.shouldSkip(ConditionEvaluator.java:102)
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader$TrackedConditionEvaluator.shouldSkip(ConfigurationClassBeanDefinitionReader.java:443)
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader$TrackedConditionEvaluator.shouldSkip(ConfigurationClassBeanDefinitionReader.java:432)
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForConfigurationClass(ConfigurationClassBeanDefinitionReader.java:127)
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitions(ConfigurationClassBeanDefinitionReader.java:116)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:320)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:228)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:272)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:92)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:687)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:525)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1118)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1107)
+	at com.jack.adminserver.AdminServerApp.main(AdminServerApp.java:14)
+Caused by: java.lang.NoClassDefFoundError: org/thymeleaf/spring5/templateresolver/SpringResourceTemplateResolver
+	at java.lang.Class.getDeclaredMethods0(Native Method)
+	at java.lang.Class.privateGetDeclaredMethods(Class.java:2701)
+	at java.lang.Class.getDeclaredMethods(Class.java:1975)
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:613)
+	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:524)
+	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:510)
+	at org.springframework.util.ReflectionUtils.getUniqueDeclaredMethods(ReflectionUtils.java:570)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.getTypeForFactoryMethod(AbstractAutowireCapableBeanFactory.java:697)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineTargetType(AbstractAutowireCapableBeanFactory.java:640)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.predictBeanType(AbstractAutowireCapableBeanFactory.java:609)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:1484)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doGetBeanNamesForType(DefaultListableBeanFactory.java:425)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanNamesForType(DefaultListableBeanFactory.java:395)
+	at org.springframework.boot.actuate.autoconfigure.EndpointWebMvcAutoConfiguration$ManagementServerPort.hasCustomBeanDefinition(EndpointWebMvcAutoConfiguration.java:424)
+	at org.springframework.boot.actuate.autoconfigure.EndpointWebMvcAutoConfiguration$ManagementServerPort.hasCustomBeanDefinition(EndpointWebMvcAutoConfiguration.java:417)
+	at org.springframework.boot.actuate.autoconfigure.EndpointWebMvcAutoConfiguration$ManagementServerPort.get(EndpointWebMvcAutoConfiguration.java:368)
+	at org.springframework.boot.actuate.autoconfigure.EndpointWebMvcAutoConfiguration$OnManagementMvcCondition.getMatchOutcome(EndpointWebMvcAutoConfiguration.java:345)
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:47)
+	... 18 common frames omitted
+Caused by: java.lang.ClassNotFoundException: org.thymeleaf.spring5.templateresolver.SpringResourceTemplateResolver
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:335)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	... 36 common frames omitted
+
+2019-03-08 17:38:19.946  INFO 10328 --- [main] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@e24ddd0: startup date [Fri Mar 08 17:38:19 CST 2019]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@544fa968
+2019-03-08 17:45:49.107  INFO 11100 --- [main] com.jack.adminserver.AdminServerApp      : No active profile set, falling back to default profiles: default
+2019-03-08 17:45:49.130  INFO 11100 --- [main] s.c.a.AnnotationConfigApplicationContext : Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@4a9e6faf: startup date [Fri Mar 08 17:45:49 CST 2019]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@7c6908d7
+2019-03-08 17:45:49.819  INFO 11100 --- [main] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'mbeanServer' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.jmx.JmxAutoConfiguration; factoryMethodName=mbeanServer; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/jmx/JmxAutoConfiguration.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.actuate.autoconfigure.EndpointMBeanExportAutoConfiguration; factoryMethodName=mbeanServer; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/actuate/autoconfigure/EndpointMBeanExportAutoConfiguration.class]]
+2019-03-08 17:45:49.850  INFO 11100 --- [main] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'discoveryClient' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.cloud.netflix.eureka.EurekaClientAutoConfiguration; factoryMethodName=discoveryClient; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/cloud/netflix/eureka/EurekaClientAutoConfiguration.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.cloud.client.discovery.noop.NoopDiscoveryClientAutoConfiguration; factoryMethodName=discoveryClient; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/cloud/client/discovery/noop/NoopDiscoveryClientAutoConfiguration.class]]
+2019-03-08 17:45:49.896 ERROR 11100 --- [main] o.s.boot.SpringApplication               : Application startup failed
+
+java.lang.NoClassDefFoundError: org/thymeleaf/spring5/templateresolver/SpringResourceTemplateResolver
+	at java.lang.Class.getDeclaredMethods0(Native Method)
+	at java.lang.Class.privateGetDeclaredMethods(Class.java:2701)
+	at java.lang.Class.getDeclaredMethods(Class.java:1975)
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:613)
+	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:524)
+	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:510)
+	at org.springframework.util.ReflectionUtils.getUniqueDeclaredMethods(ReflectionUtils.java:570)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.getTypeForFactoryMethod(AbstractAutowireCapableBeanFactory.java:697)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineTargetType(AbstractAutowireCapableBeanFactory.java:640)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.predictBeanType(AbstractAutowireCapableBeanFactory.java:609)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:1484)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doGetBeanNamesForType(DefaultListableBeanFactory.java:425)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanNamesForType(DefaultListableBeanFactory.java:395)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:96)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:687)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:525)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1118)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1107)
+	at com.jack.adminserver.AdminServerApp.main(AdminServerApp.java:14)
+Caused by: java.lang.ClassNotFoundException: org.thymeleaf.spring5.templateresolver.SpringResourceTemplateResolver
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:335)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	... 22 common frames omitted
+
+2019-03-08 17:45:49.898  INFO 11100 --- [main] s.c.a.AnnotationConfigApplicationContext : Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@4a9e6faf: startup date [Fri Mar 08 17:45:49 CST 2019]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@7c6908d7
+2019-03-08 17:49:05.412  INFO 5752 --- [main] com.jack.adminserver.AdminServerApp      : No active profile set, falling back to default profiles: default
+2019-03-08 17:49:05.434  INFO 5752 --- [main] s.c.a.AnnotationConfigApplicationContext : Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@44a2b17b: startup date [Fri Mar 08 17:49:05 CST 2019]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@ba2f4ec
+2019-03-08 17:49:06.369  INFO 5752 --- [main] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'mbeanServer' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.jmx.JmxAutoConfiguration; factoryMethodName=mbeanServer; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/jmx/JmxAutoConfiguration.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.actuate.autoconfigure.EndpointMBeanExportAutoConfiguration; factoryMethodName=mbeanServer; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/actuate/autoconfigure/EndpointMBeanExportAutoConfiguration.class]]
+2019-03-08 17:49:06.398  INFO 5752 --- [main] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'discoveryClient' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.cloud.netflix.eureka.EurekaClientAutoConfiguration; factoryMethodName=discoveryClient; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/cloud/netflix/eureka/EurekaClientAutoConfiguration.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.cloud.client.discovery.noop.NoopDiscoveryClientAutoConfiguration; factoryMethodName=discoveryClient; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/cloud/client/discovery/noop/NoopDiscoveryClientAutoConfiguration.class]]
+2019-03-08 17:49:06.451 ERROR 5752 --- [main] o.s.boot.SpringApplication               : Application startup failed
+
+java.lang.NoClassDefFoundError: org/thymeleaf/spring5/templateresolver/SpringResourceTemplateResolver
+	at java.lang.Class.getDeclaredMethods0(Native Method)
+	at java.lang.Class.privateGetDeclaredMethods(Class.java:2701)
+	at java.lang.Class.getDeclaredMethods(Class.java:1975)
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:613)
+	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:524)
+	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:510)
+	at org.springframework.util.ReflectionUtils.getUniqueDeclaredMethods(ReflectionUtils.java:570)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.getTypeForFactoryMethod(AbstractAutowireCapableBeanFactory.java:697)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineTargetType(AbstractAutowireCapableBeanFactory.java:640)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.predictBeanType(AbstractAutowireCapableBeanFactory.java:609)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:1484)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doGetBeanNamesForType(DefaultListableBeanFactory.java:425)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanNamesForType(DefaultListableBeanFactory.java:395)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:96)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:687)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:525)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1118)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1107)
+	at com.jack.adminserver.AdminServerApp.main(AdminServerApp.java:14)
+Caused by: java.lang.ClassNotFoundException: org.thymeleaf.spring5.templateresolver.SpringResourceTemplateResolver
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:335)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	... 22 common frames omitted
+
+2019-03-08 17:49:06.453  INFO 5752 --- [main] s.c.a.AnnotationConfigApplicationContext : Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@44a2b17b: startup date [Fri Mar 08 17:49:05 CST 2019]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@ba2f4ec
+2019-03-08 17:50:20.779  INFO 11120 --- [main] com.jack.adminserver.AdminServerApp      : No active profile set, falling back to default profiles: default
+2019-03-08 17:50:20.803  INFO 11120 --- [main] s.c.a.AnnotationConfigApplicationContext : Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@4a9e6faf: startup date [Fri Mar 08 17:50:20 CST 2019]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@ba2f4ec
+2019-03-08 17:50:21.545  INFO 11120 --- [main] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'mbeanServer' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.jmx.JmxAutoConfiguration; factoryMethodName=mbeanServer; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/jmx/JmxAutoConfiguration.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.actuate.autoconfigure.EndpointMBeanExportAutoConfiguration; factoryMethodName=mbeanServer; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/actuate/autoconfigure/EndpointMBeanExportAutoConfiguration.class]]
+2019-03-08 17:50:21.581  INFO 11120 --- [main] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'discoveryClient' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.cloud.netflix.eureka.EurekaClientAutoConfiguration; factoryMethodName=discoveryClient; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/cloud/netflix/eureka/EurekaClientAutoConfiguration.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.cloud.client.discovery.noop.NoopDiscoveryClientAutoConfiguration; factoryMethodName=discoveryClient; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/cloud/client/discovery/noop/NoopDiscoveryClientAutoConfiguration.class]]
+2019-03-08 17:50:21.654 ERROR 11120 --- [main] o.s.boot.SpringApplication               : Application startup failed
+
+java.lang.NoClassDefFoundError: org/thymeleaf/spring5/templateresolver/SpringResourceTemplateResolver
+	at java.lang.Class.getDeclaredMethods0(Native Method)
+	at java.lang.Class.privateGetDeclaredMethods(Class.java:2701)
+	at java.lang.Class.getDeclaredMethods(Class.java:1975)
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:613)
+	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:524)
+	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:510)
+	at org.springframework.util.ReflectionUtils.getUniqueDeclaredMethods(ReflectionUtils.java:570)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.getTypeForFactoryMethod(AbstractAutowireCapableBeanFactory.java:697)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineTargetType(AbstractAutowireCapableBeanFactory.java:640)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.predictBeanType(AbstractAutowireCapableBeanFactory.java:609)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:1484)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doGetBeanNamesForType(DefaultListableBeanFactory.java:425)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanNamesForType(DefaultListableBeanFactory.java:395)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:96)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:687)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:525)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1118)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1107)
+	at com.jack.adminserver.AdminServerApp.main(AdminServerApp.java:14)
+Caused by: java.lang.ClassNotFoundException: org.thymeleaf.spring5.templateresolver.SpringResourceTemplateResolver
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:335)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	... 22 common frames omitted
+
+2019-03-08 17:50:21.658  INFO 11120 --- [main] s.c.a.AnnotationConfigApplicationContext : Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@4a9e6faf: startup date [Fri Mar 08 17:50:20 CST 2019]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@ba2f4ec

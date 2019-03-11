@@ -1,0 +1,19 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://192.168.6.13:8761/eureka/
+management:
+  security:
+    enabled: false
+server:
+  port: 5000
+logging:
+  file: logs/boot-admin.log
+spring:
+  application:
+    name: service-admin
+#boot:
+#  admin:
+#    routes:
+#      endpoints: evn,metrics,dump,jolokia,info,configprops,trace,logfile,refresh,
+#flyway,liquibase,heapdump,loggers,auditevents,hystrix.stream
